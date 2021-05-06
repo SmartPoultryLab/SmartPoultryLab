@@ -8,13 +8,6 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 - [Django](https://www.django-rest-framework.org/) - powerful and flexible toolkit for building Web APIs.
 - [MySQL](https://www.mysql.com/) - fully managed database service to deploy cloud-native applications.
 - [Vue](https://vuejs.org/) - Progressive JavaScript Framework for building reactive single page applications
-* Django
-* Django REST framework
-* Django Whitenoise, CDN Ready
-* Vue CLI 3
-* Vue Router
-* Vuex
-
 
 ## _Backend-Group Tasks_
 
@@ -54,7 +47,7 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 - [ ] Configure Static/media & templates
 - [ ] Integrate material ui & react js on templates
 
-## Database-Group Tasks_
+## _Database-Group Tasks_
 
 ### Tasks list (Ahmed Saify)
 - [x] Users api CRUD endpoints
@@ -65,6 +58,9 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 - [ ] Integrate material ui & react js on templates
   
 
+
+## Installation
+
 ### Includes
 
 * Django
@@ -73,11 +69,8 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 * Vue CLI 3
 * Vue Router
 * Vuex
-* Gunicorn
-* Configuration for Heroku Deployment
 
-
-### Template Structure
+### Project Structure
 
 
 | Location             |  Content                                   |
