@@ -1,6 +1,5 @@
 # Smart Poultry Laboratory
 
-
 ## Used Technologies
 Smart Poultry Laboratory uses a number of open source projects to work properly:
 
@@ -12,51 +11,39 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 ## _Backend-Group Tasks_
 
 ### Tasks list (Mohamed Shawky)
-- [x] Users api CRUD endpoints
-- [x] DRF JWT Authentication
-- [x] Add docker configurations
-- [ ] Document folder structure
-- [ ] Configure Static/media & templates
-- [ ] Integrate material ui & react js on templates
-  
+
+- [x] Create project and folders structure
+- [ ] Setup Database migrations         (due 07/05/2021)
+- [ ] Users api CRUD endpoints          (due 07/05/2021)
+- [ ] Implement JWT Authentication      (due 07/05/2021)
+- [ ] PostMortem api CRUD endpoints     (due 09/05/2021)
 
 ### Tasks list (Omar Baz)
-- [x] Users api CRUD endpoints
-- [x] DRF JWT Authentication
-- [x] Add docker configurations
-- [ ] Document folder structure
-- [ ] Configure Static/media & templates
-- [ ] Integrate material ui & react js on templates
+
+- [ ] Owners api CRUD endpoints     (due 08/05/2021)
+- [ ] Farms api CRUD endpoints      (due 08/05/2021)
 
 ## _Frontend-Group Tasks_
 
 ### Tasks list (Ali Gamal)
-- [x] Users api CRUD endpoints
-- [x] DRF JWT Authentication
-- [x] Add docker configurations
-- [ ] Document folder structure
-- [ ] Configure Static/media & templates
-- [ ] Integrate material ui & react js on templates
-  
 
+- [ ] Design Owners Page         (due 07/05/2021)
+- [ ] Design Farms Page          (due 08/05/2021)
+- [ ] Design PostMortem Page     (due 09/05/2021)
+  
 ### Tasks list (Lo'ay Mokhtar)
-- [x] Users api CRUD endpoints
-- [x] DRF JWT Authentication
-- [x] Add docker configurations
-- [ ] Document folder structure
-- [ ] Configure Static/media & templates
-- [ ] Integrate material ui & react js on templates
+
+- [ ]  Design PostMortem Page     (due 09/05/2021)
+- [ ]  Design Profile Page        (due 08/05/2021)
+- [ ]  Design Settings Page       (due 09/05/2021)
+
 
 ## _Database-Group Tasks_
 
 ### Tasks list (Ahmed Saify)
-- [x] Users api CRUD endpoints
-- [x] DRF JWT Authentication
-- [x] Add docker configurations
-- [ ] Document folder structure
-- [ ] Configure Static/media & templates
-- [ ] Integrate material ui & react js on templates
-  
+
+- [ ] Draw the base ERD (due 07/05/2021)
+- [ ] Create first database model (due 07/05/2021)
 
 
 ## Installation
@@ -73,14 +60,14 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 ### Project Structure
 
 
-| Location             |  Content                                   |
-|----------------------|--------------------------------------------|
-| `/backend`           | Django Project & Backend Config            |
-| `/backend/api`       | Django App (`/api`)                        |
-| `/src`               | Vue App .                                  |
-| `/src/main.js`       | JS Application Entry Point                 |
-| `/public/index.html` | Html Application Entry Point (`/`)         |
-| `/public/static`     | Static Assets                              |
+| Location             | Content                                           |
+| -------------------- | ------------------------------------------------- |
+| `/backend`           | Django Project & Backend Config                   |
+| `/backend/api`       | Django App (`/api`)                               |
+| `/src`               | Vue App .                                         |
+| `/src/main.js`       | JS Application Entry Point                        |
+| `/public/index.html` | Html Application Entry Point (`/`)                |
+| `/public/static`     | Static Assets                                     |
 | `/dist/`             | Bundled Assets Output (generated at `yarn build`) |
 
 ## Prerequisites
