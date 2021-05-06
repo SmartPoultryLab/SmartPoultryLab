@@ -1,5 +1,5 @@
 # Smart Poultry Laboratory
-## _Backend-section (built on django python)_
+
 
 ## Used Technologies
 Smart Poultry Laboratory uses a number of open source projects to work properly:
@@ -7,7 +7,16 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 - [Python](https://www.python.org/) - programming language that lets you work quickly and integrate systems more effectively
 - [Django](https://www.django-rest-framework.org/) - powerful and flexible toolkit for building Web APIs.
 - [MySQL](https://www.mysql.com/) - fully managed database service to deploy cloud-native applications.
+- [Vue](https://vuejs.org/) - Progressive JavaScript Framework for building reactive single page applications
+* Django
+* Django REST framework
+* Django Whitenoise, CDN Ready
+* Vue CLI 3
+* Vue Router
+* Vuex
 
+
+## _Backend-Group Tasks_
 
 ### Tasks list (Mohamed Shawky)
 - [x] Users api CRUD endpoints
@@ -26,49 +35,109 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 - [ ] Configure Static/media & templates
 - [ ] Integrate material ui & react js on templates
 
+## _Frontend-Group Tasks_
 
-#### Jwt token endpoint
-Method | Endpoint | Functionanlity
---- | --- | ---
-POST | `/api-token-auth` | Request jwt token
+### Tasks list (Ali Gamal)
+- [x] Users api CRUD endpoints
+- [x] DRF JWT Authentication
+- [x] Add docker configurations
+- [ ] Document folder structure
+- [ ] Configure Static/media & templates
+- [ ] Integrate material ui & react js on templates
+  
 
-#### User Endpoints
+### Tasks list (Lo'ay Mokhtar)
+- [x] Users api CRUD endpoints
+- [x] DRF JWT Authentication
+- [x] Add docker configurations
+- [ ] Document folder structure
+- [ ] Configure Static/media & templates
+- [ ] Integrate material ui & react js on templates
 
-Method | Endpoint | Functionality
---- | --- | ---
-GET | `/api/user` | List users
-POST | `/api/user/create` | Creates a user
-GET | `/api/user/profile/{pk}` | Retrieve a user
-PUT | `/api/user/update/{pk}` | Edit a user
-DELETE | `/api/user/destroy/{pk}` | Delete a user
+## Database-Group Tasks_
+
+### Tasks list (Ahmed Saify)
+- [x] Users api CRUD endpoints
+- [x] DRF JWT Authentication
+- [x] Add docker configurations
+- [ ] Document folder structure
+- [ ] Configure Static/media & templates
+- [ ] Integrate material ui & react js on templates
+  
+
+### Includes
+
+* Django
+* Django REST framework
+* Django Whitenoise, CDN Ready
+* Vue CLI 3
+* Vue Router
+* Vuex
+* Gunicorn
+* Configuration for Heroku Deployment
 
 
-### Installation 
-First ensure you have python globally installed in your computer. If not, you can get python [here](python.org).
+### Template Structure
 
-After doing this, confirm that you have installed virtualenv globally as well. If not, run this:
 
-    $ pip install virtualenv
-Then, Git clone this repo to your PC
+| Location             |  Content                                   |
+|----------------------|--------------------------------------------|
+| `/backend`           | Django Project & Backend Config            |
+| `/backend/api`       | Django App (`/api`)                        |
+| `/src`               | Vue App .                                  |
+| `/src/main.js`       | JS Application Entry Point                 |
+| `/public/index.html` | Html Application Entry Point (`/`)         |
+| `/public/static`     | Static Assets                              |
+| `/dist/`             | Bundled Assets Output (generated at `yarn build`) |
 
-    $ git clone https://github.com/SmartPoultryLab/BackEnd-PythonDjango.git
-    $ cd BackEnd-PythonDjango
-Create a virtual environment
+## Prerequisites
 
-    $ virtualenv .venv && source .venv/bin/activate
-Install dependancies
+Before getting started you should have the following installed and running:
 
-    $ pip install -r requirements.txt
-Make migrations & migrate
+- [X] Yarn - [instructions](https://yarnpkg.com/en/docs/install)
+- [X] Vue CLI 3 - [instructions](https://cli.vuejs.org/guide/installation.html)
+- [X] Python 3 - [instructions](https://wiki.python.org/moin/BeginnersGuide)
+- [X] Pipenv - [instructions](https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv)
 
-    $ python manage.py makemigrations && python manage.py migrate
-Create Super user
-    
-    $ python manage.py createsuperuser
+## Setup Project
 
-### Launching the app
-    $ python manage.py runserver
+```
+$ git clone https://github.com/gtalarico/django-vue-template
+$ cd django-vue-template
+```
 
-### Run Tests
-    $ python manage.py test
+Setup
+```
+$ yarn install
+$ pipenv install --dev && pipenv shell
+$ python manage.py migrate
+```
 
+## Running Development Servers
+
+```
+$ python manage.py runserver
+```
+
+From another tab in the same directory:
+
+```
+$ yarn serve
+```
+
+The Vue application will be served from [`localhost:8080`](http://localhost:8080/) and the Django API
+and static files will be served from [`localhost:8000`](http://localhost:8000/).
+
+The dual dev server setup allows you to take advantage of
+webpack's development server with hot module replacement.
+Proxy config in [`vue.config.js`](/vue.config.js) is used to route the requests
+back to django's API on port 8000.
+
+If you would rather run a single dev server, you can run Django's
+development server only on `:8000`, and you have to build the Vue app first
+and the page will not reload on changes.
+
+```
+$ yarn build
+$ python manage.py runserver
+```
