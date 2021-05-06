@@ -95,8 +95,8 @@ Before getting started you should have the following installed and running:
 ## Setup Project
 
 ```
-$ git clone https://github.com/gtalarico/django-vue-template
-$ cd django-vue-template
+$ git clone https://github.com/SmartPoultryLab/SmartPoultryLab.git
+$ cd SmartPoultryLab
 ```
 
 Setup
