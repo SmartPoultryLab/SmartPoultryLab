@@ -87,6 +87,7 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 
 Before getting started you should have the following installed and running:
 
+- [x] Node.js - [instructions](https://nodejs.org/en/download/)
 - [X] Yarn - [instructions](https://yarnpkg.com/en/docs/install)
 - [X] Vue CLI 3 - [instructions](https://cli.vuejs.org/guide/installation.html)
 - [X] Python 3 - [instructions](https://wiki.python.org/moin/BeginnersGuide)
