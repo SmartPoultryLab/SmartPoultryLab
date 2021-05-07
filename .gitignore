@@ -1,16 +1,29 @@
 .DS_Store
-node_modules/
-.node_modules/
-dist/
+node_modules
+apps/vue/node_modules
+apps/vue/dist
+apps/nest/node_modules
+apps/nest/dist
+libs/shared/node_modules
+libs/shared/dist
+
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+
+# local env files
+apps/vue/.env.local
+apps/vue/.env.*.local
+
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-test/unit/coverage
-test/e2e/reports
-selenium-debug.log
-server/
-/dist
-db.sqlite3
-/venv
-/old
-__pycache__
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

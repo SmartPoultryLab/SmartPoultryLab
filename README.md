@@ -3,10 +3,10 @@
 ## Used Technologies
 Smart Poultry Laboratory uses a number of open source projects to work properly:
 
-- [Python](https://www.python.org/) - programming language that lets you work quickly and integrate systems more effectively
-- [Django](https://www.django-rest-framework.org/) - powerful and flexible toolkit for building Web APIs.
-- [MySQL](https://www.mysql.com/) - fully managed database service to deploy cloud-native applications.
+* [NodeJS](https://nodejs.org) -  JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [MySQL](https://www.mysql.com/) - fully managed database service to deploy cloud-native applications
 - [Vue](https://vuejs.org/) - Progressive JavaScript Framework for building reactive single page applications
+- [NestJS](https://nestjs.com/) - A progressive Node.js framework for building efficient, reliable and scalable server-side applications.
 
 ## _Backend-Group Tasks_
 
@@ -57,18 +57,16 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 * Vue Router
 * Vuex
 
-### Project Structure
+## Directory Structure
 
+- `root`: Project root holds all the fies of the project
+    - `apps`: Holds client(VueJS) and server(NestJS) projects (You can add any client or server frameworks in here in addition or replace with existing ones. See section `Add other frameworks` in `How To`)
+        - `vue`: A Vue project created using vue-cli
+        - `nest`: A Nest project created using nest-cli
+    - `libs`: Holds all the common codes you can share between projects
+        - `shared`: A shared module for common code sharing across projects in this work space.
+    - `readme-images`: Holds all the images for README.
 
-| Location             | Content                                           |
-| -------------------- | ------------------------------------------------- |
-| `/backend`           | Django Project & Backend Config                   |
-| `/backend/api`       | Django App (`/api`)                               |
-| `/src`               | Vue App .                                         |
-| `/src/main.js`       | JS Application Entry Point                        |
-| `/public/index.html` | Html Application Entry Point (`/`)                |
-| `/public/static`     | Static Assets                                     |
-| `/dist/`             | Bundled Assets Output (generated at `yarn build`) |
 
 ## Prerequisites
 
@@ -77,11 +75,10 @@ Before getting started you should have the following installed and running:
 - [x] Node.js - [instructions](https://nodejs.org/en/download/)
 - [X] Yarn - [instructions](https://yarnpkg.com/en/docs/install)
 - [X] Vue CLI 3 - [instructions](https://cli.vuejs.org/guide/installation.html)
-- [X] Python 3 - [instructions](https://wiki.python.org/moin/BeginnersGuide)
-- [X] Pipenv - [instructions](https://pipenv.readthedocs.io/en/latest/install/#installing-pipenv)
-
+- [X] NestJs- [instructions](https://docs.nestjs.com/)
+  
 ## Setup Project
-
+Clone Repo
 ```
 $ git clone https://github.com/SmartPoultryLab/SmartPoultryLab.git
 $ cd SmartPoultryLab
@@ -90,35 +87,25 @@ $ cd SmartPoultryLab
 Setup
 ```
 $ yarn install
-$ pipenv install --dev && pipenv shell
-$ python manage.py migrate
 ```
 
-## Running Development Servers
+## Scripts
 
-```
-$ python manage.py runserver
-```
-
-From another tab in the same directory:
-
-```
-$ yarn serve
-```
-
-The Vue application will be served from [`localhost:8080`](http://localhost:8080/) and the Django API
-and static files will be served from [`localhost:8000`](http://localhost:8000/).
-
-The dual dev server setup allows you to take advantage of
-webpack's development server with hot module replacement.
-Proxy config in [`vue.config.js`](/vue.config.js) is used to route the requests
-back to django's API on port 8000.
-
-If you would rather run a single dev server, you can run Django's
-development server only on `:8000`, and you have to build the Vue app first
-and the page will not reload on changes.
-
-```
-$ yarn build
-$ python manage.py runserver
-```
+* `yarn dev:all:start` - Starts Development server for shared, vue and nest,
+* `yarn dev:all:build` - Builds shared, vue and nest,
+* `yarn dev:vue:start` - Starts vue development nest,
+* `yarn dev:vue:build` - Builds vue,
+* `yarn dev:vue:lint` - Lints vue,
+* `yarn test:vue:unit` - Unit testing for vue,
+* `yarn test:vue:e2e` - End to End testing for vue,
+* `yarn dev:nest:start` - Starts nest development server,
+* `yarn dev:nest:build` - Builds nest,
+* `yarn dev:nest:lint` - Lints nest,
+* `yarn prod:nest:start` - Starts nest in production mode,
+* `yarn dev:shared:start` - Starts shared development nest,
+* `yarn dev:shared:build` - Builds shared,
+* `yarn dev-shared:vue:start` - Starts shared and vue in development mode,
+* `yarn dev-shared:nest:start` - Starts shared and nest in development mode,
+* `yarn dev-shared:vue:build` - Builds shared and vue,
+* `yarn dev-shared:nest:build` - Builds shared and nest,
+* `yarn utils:remove-node-modules` - Removes all node_modules folders
