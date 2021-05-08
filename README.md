@@ -3,7 +3,7 @@
 ## Used Technologies
 Smart Poultry Laboratory uses a number of open source projects to work properly:
 
-* [NodeJS](https://nodejs.org) -  JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [NodeJS](https://nodejs.org) -  JavaScript runtime built on Chrome's V8 JavaScript engine.
 - [MySQL](https://www.mysql.com/) - fully managed database service to deploy cloud-native applications
 - [Vue](https://vuejs.org/) - Progressive JavaScript Framework for building reactive single page applications
 - [NestJS](https://nestjs.com/) - A progressive Node.js framework for building efficient, reliable and scalable server-side applications.
@@ -49,10 +49,7 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
 ## Installation
 
 ### Includes
-
-* Django
-* Django REST framework
-* Django Whitenoise, CDN Ready
+* Nest CLI
 * Vue CLI 3
 * Vue Router
 * Vuex
