@@ -65,7 +65,6 @@ Smart Poultry Laboratory uses a number of open source projects to work properly:
         - `nest`: A Nest project created using nest-cli
     - `libs`: Holds all the common codes you can share between projects
         - `shared`: A shared module for common code sharing across projects in this work space.
-    - `readme-images`: Holds all the images for README.
 
 
 ## Prerequisites
